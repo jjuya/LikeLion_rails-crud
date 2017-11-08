@@ -28,6 +28,8 @@ class PostController < ApplicationController
         
         post = Post.find(@id) #find는 id값만 받는다.
         post.destroy
+        
+        redirect_to '/'
     end
     
     def show
@@ -51,5 +53,7 @@ class PostController < ApplicationController
             title: params[:title],
             content: params[:content]
         )
+        
+        redirect_to '/post/show/'+id
     end
 end
