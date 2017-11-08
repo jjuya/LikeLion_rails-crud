@@ -14,7 +14,7 @@ AI 빅데이터 분석가 양성 과정
         1) 점심 메뉴 추천 : hash
         2) 로또 번호 추천
         3) op.gg 스크래핑 : Nokogiri, HTTParty, logging(csv, http://ruby-doc.org/stdlib-2.0.0/libdoc/csv/rdoc/CSV.html)
-    * 서버 : Heroku
+    * 서버 : Heroku0
 - day 3 : [rails CRUD](https://github.com/jjuya/LikeLion_rails-crud)
     * rails 맛보기
         1) routing(routes.rb)
@@ -30,3 +30,10 @@ AI 빅데이터 분석가 양성 과정
     * Read : show
     * destroy : destory
     * update : modify, update
+    * Bootstrap을 이용한 CSS 맛보기
+- day 3 : [Ruby Test](https://github.com/jjuya/LikeLion_class_Ruby/tree/master/3day_Ruby)
+    * block
+    * Unit Test(잘 모르겠다)
+        1) calculator.rb
+        2) calculator_test.rb
+    * RSpec : http://rspec.info/

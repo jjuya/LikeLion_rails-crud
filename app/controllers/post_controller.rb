@@ -19,6 +19,8 @@ class PostController < ApplicationController
             title: @title,
             content: @content
         )
+        
+        redirect_to '/'
     end
     
     def destroy
@@ -48,8 +50,8 @@ class PostController < ApplicationController
     def update
         id = params[:id]
         
-        @post = Post.find(id)
-        @post.update(
+        post = Post.find(id)
+        post.update(
             title: params[:title],
             content: params[:content]
         )

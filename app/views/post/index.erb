@@ -1,31 +1,38 @@
-<h1>Welcome to fake instagram</h1>
-
-<form action='/post/create'>
-    제목 : <input type='text' name='title'></br>
-    내용 : <input type='text' name='content'></br>
-    <input type='submit' value='글쓰기'>
-</form>
-
-<table>
-    <tr>
-        <th>#</th>
-        <th>제목</th>
-        <th>내용</th>
-        <th>시간</th>
-        <th>기능</th>
-    </tr>
+<div class="container">
     
-    <% @posts.each do |post| %>
-    <tr>
-        <td> <%= post.id %> </td>
-        <td> <%= post.title %> </td>
-        <td> <%= post.content %> </td>
-        <td> <%= post.created_at %></td>
-        <td> <a href='/post/show/<%= post.id %>'>[더보기]</a> </td>
-        <td> <a href='/post/modify/<%= post.id %>'>[수정]</a> </td>
-        <!-- <td> <a href='/post/destroy?id=<%= post.id %>'>[X]</a> </td> -->
-        <td> <a href='/post/destroy/<%= post.id %>'>[삭제]</a> </td>
-    </tr>
-    <% end %>
+    <h1>Welcome to fake instagram</h1>
     
-</table>
+    <form action='/post/create'>
+        <div class="form-group">
+            <label for="title">제목</label>
+            <input type="text" class="form-control" name="title" placeholder="제목을 입력해 주세요">
+        </div>
+    
+        <div class="form-group">
+            <label for="content">내용</label>
+            <textarea class="form-control" name='content' rows="3"></textarea>
+        </div>
+    
+        <button type="submit" class="btn btn-primary">글쓰기</button>
+    </form>
+    
+    <div class="form-group">
+        
+    </div>
+    
+    <div class="card">
+        <% @posts.reverse.each do |post| %>
+            <div class="card-body">
+                <h4 class="card-title"><%= post.title %></h4>
+                <h6 class="card-subtitle mb-2 text-muted"><%= post.id %> 번째 글</h6>
+                <p class="card-text"><%= post.content %></p>
+                <%= post.created_at %></br>
+                <a href='/post/show/<%= post.id %>' class="btn btn-outline-dark btn-sm">더보기</a> </td>
+                <a href='/post/modify/<%= post.id %>' class="btn btn-outline-primary btn-sm">수정</a> </td>
+                <!-- <td> <a href='/post/destroy?id=<%= post.id %>'>[X]</a> </td> -->
+                <td> <a href='/post/destroy/<%= post.id %>' class="btn btn-outline-danger btn-sm">삭제</a> </td>
+            </div>
+        <% end %>
+    </div>
+
+</div>
