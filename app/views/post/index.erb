@@ -6,7 +6,26 @@
     <input type='submit' value='글쓰기'>
 </form>
 
-<% @posts.each do |post| %>
-    제목 : <%= post.title %> </br>
-    내용 : <%= post.content %> </br>
-<% end %>
+<table>
+    <tr>
+        <th>#</th>
+        <th>제목</th>
+        <th>내용</th>
+        <th>시간</th>
+        <th>기능</th>
+    </tr>
+    
+    <% @posts.each do |post| %>
+    <tr>
+        <td> <%= post.id %> </td>
+        <td> <%= post.title %> </td>
+        <td> <%= post.content %> </td>
+        <td> <%= post.created_at %></td>
+        <td> <a href='/post/show/<%= post.id %>'>[더보기]</a> </td>
+        <td> <a href='/post/modify/<%= post.id %>'>[수정]</a> </td>
+        <!-- <td> <a href='/post/destroy?id=<%= post.id %>'>[X]</a> </td> -->
+        <td> <a href='/post/destroy/<%= post.id %>'>[삭제]</a> </td>
+    </tr>
+    <% end %>
+    
+</table>

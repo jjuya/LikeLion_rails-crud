@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   
   get '/' => 'post#index'
   get '/post/create' => 'post#create' # post_controller.rb의 create 메서드로 날려 줄게
+  get '/post/destroy/:id' => 'post#destroy' # variable routing
+  get '/post/show/:id' => 'post#show' # variable routing
+  get '/post/modify/:id' => 'post#modify' # variable routing
+  get '/post/update/:id' => 'post#update' # variable routing
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -20,7 +20,13 @@ AI 빅데이터 분석가 양성 과정
         1) routing(routes.rb)
         2) controller 생성(rails g controller post) : app/controllers/post_controller.rb
         3) model 생성(rails g model post) : app/modles/post.rb, db/migrate/20171108022640_create_posts.rb, db/schema.rb
-    * Create 
-        1) CSV
-        2) ORM(데이터베이스를 사용했지만 사용하지 않은 것 처럼)
             - [rails_db](https://rails-crud-jjuya.c9users.io/rails/db) : https://github.com/igorkasyanchuk/rails_db
+            - [Active Record](http://guides.rorlab.org/active_record_basics.html)
+                * ex) Post.all, Post.first, Post.last ..
+                * primary key를 정수값으로 자동 생성 : id
+    * Create : create
+        1) CSV
+        2) ORM(데이터베이스를 사용했지만 사용하지 않은 것 처럼) : create
+    * Read : show
+    * destroy : destory
+    * update : modify, update
